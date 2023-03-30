@@ -1,18 +1,22 @@
 <?php
 $satu = $_POST['1'];
 $dua = $_POST['2'];
-$operasi = $_POST['operasi'];
+$operasi =$_POST['operasi'];
 
-if($operasi =="+"){
+switch ($operasi) {
+  case "+":
     $hasil=$satu+$dua;
-}
-elseif($operasi =="-"){
+    break;
+  case "-":
     $hasil=$satu-$dua;
-}
-elseif($operasi =="*"){
-    $hasil=$satu*$dua;
-}
-elseif($operasi =="/"){
+    break;
+  case "/":
     $hasil=$satu/$dua;
+    break;
+  case "*":
+    $hasil=$satu*$dua;
+    break;
+  default:
+    echo "you insert wrong input";
 }
 ?>
